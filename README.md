@@ -103,9 +103,10 @@ LG U+ Why Not SW Camp 7기 피사모 프로젝트의 첫 번째 레포지토리�
   <details><summary>UI
 </summary>
  <tr>
-    <td><img src=""/></td>
-    <td><img src="" /></td>
-    <td><img src="" /></td>
+    <td><img src="2차프로젝트_img/2차프로젝트_메인화면dashboard.png" /></td>
+    <td><img src="2차프로젝트_img/2차프로젝트_비회원dashboard.png" /></td>
+    <td><img src="2차프로젝트_img/2차프로젝트_챗봇dashboard.png" /></td>
+    <td><img src="2차프로젝트_img/2차프로젝트_관리자dashboard.png"/></td>
   </tr>
     
  </details>
