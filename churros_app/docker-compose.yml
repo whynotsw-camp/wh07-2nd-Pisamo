@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: churros_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: Churo2_db
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      # 만약 처음부터 자동으로 데이터 복원하고 싶으면 아래 라인 추가
+      - ./churo2_backup.sql:/docker-entrypoint-initdb.d/churo2_backup.sql
+
+  app:
+    build: .
+    container_name: churros_app
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}   # .env에서 불러오기
+
+volumes:
+  db_data:
+

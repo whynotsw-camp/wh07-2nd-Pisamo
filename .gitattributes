@@ -1,0 +1,23 @@
+# 기본적으로 텍스트 파일은 자동 감지
+* text=auto
+
+# 리눅스 환경에서 돌아가는 파일들은 LF로 고정
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.py text eol=lf
+*.Dockerfile text eol=lf
+Dockerfile text eol=lf
+requirements.txt text eol=lf
+
+# Windows 환경에서만 쓰이는 파일은 CRLF 허용
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 이미지/데이터 파일은 바이너리 처리 (개행 변환 X)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.csv text
+*.tsv text
